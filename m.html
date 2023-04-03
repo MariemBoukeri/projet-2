@@ -1,0 +1,83 @@
+<DOCTYPE html!>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>website</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="wrapper">
+  <div class="form-box">
+   <h2>Login</h2>
+   <form action="#">
+ <div class="input-box">
+ 
+         <input type="text" placeholder="enter your name" required/>
+         <label>Nom</label>
+      </div>
+ <div class="input-box">
+       
+         <input type="text" placeholder="enter your first name " required/>
+         <label>Prénom</label>
+      </div>
+ <div class="input-box">
+         
+         <input id="demo" type="tel" placeholder="enter your phone number" required/>
+         <label>téléphone</label>
+      </div>
+      <div class="input-box">
+         
+         <input type="number" placeholder="enter your age" required/>
+         <label>âge</label>
+      </div>
+ <div class="input-box">
+        
+         <input id="dem" type="email" placeholder="enter your email" required/>
+         <label>Email</label>
+      </div>
+      <button type="submit" class="btn">click here</button>
+      <div class="register">
+         <p>Don't have an account ?<a href="#" class="link">Register</a></p>
+ </form>
+  </div>
+</div>
+  
+<script>
+//Function to execute email
+function estemail(email){
+//The indexOf() method returns the position of the first occurrence
+    let h=email.indexOf("@");
+//The lastIndexOf() method returns the index (position) of the last occurrence 
+    let b=email.lastIndexOf(".");
+    if ((h==-1||b==-1)&&(h>=b))
+        return false;
+//The slice() method returns selected elements in an array
+    x=email.slice(0,h);
+    x=email.slice(h+1,b);
+    x=email.slice(b+1);
+    if (estalphanum(x)||estnum(y)||estalpha(z))
+        return false;
+//the length property sets or returns the number of elements in an array
+    if (z.length<2||z.length>3)
+       return false;
+    return true;
+}
+document.getElementById("dem").innerHTML=alert(estemail(email));
+//un message donner par l'utilisateur
+let chaine=prompt("Donner une chaine");
+let c=chaine[0];
+let i=0;
+//The charCodeAt() method returns the Unicode of the character at a specified index (position) in a string
+while(i<chaine.length &&'0'<=chaine.charCodeAt(c)&& chaine.charCodeAt(c)<='9'){
+  i++
+  c=chaine[i];
+}
+if (i===chaine.length){
+  document.writh("est numerique");}
+else{
+  document.writh("n'est pas numerique");}
+document.getElementById("demo").innerHTML=chaine;
+ 
+</script>
+</body>
+</html>
